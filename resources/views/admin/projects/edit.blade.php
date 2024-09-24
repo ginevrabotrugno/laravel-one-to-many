@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container my-4">
-        <h1 class="my-5">New Project</h1>
+        <h1 class="my-5">Edit | {{$project->title}}</h1>
         @if ($errors->any())
             <div class="alert alert-danger" role="alert">
                 <ul>
