@@ -21,7 +21,13 @@
         <li>
             <a href="{{ route('admin.typeProjects') }}" class="nav-link text-white">
                 <i class="fa-solid fa-tag"></i>
-                <span>Category Projs</span>
+                <span>Type Projects</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('admin.typeProjects') }}" class="nav-link text-white">
+                <i class="fa-solid fa-bars-progress"></i>
+                <span>Types</span>
             </a>
         </li>
     </ul>
