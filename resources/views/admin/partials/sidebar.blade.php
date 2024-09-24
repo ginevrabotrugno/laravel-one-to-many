@@ -18,5 +18,11 @@
                 <span>New</span>
             </a>
         </li>
+        <li>
+            <a href="{{ route('admin.typeProjects') }}" class="nav-link text-white">
+                <i class="fa-solid fa-tag"></i>
+                <span>Category Projs</span>
+            </a>
+        </li>
     </ul>
 </div>
