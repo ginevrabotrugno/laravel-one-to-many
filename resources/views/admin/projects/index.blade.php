@@ -36,8 +36,8 @@
                         <td> {{ $project->status }} </td>
                         <td class="text-center">
                             @if ($project->type)
-                                <span class="badge text-bg-success">
-                                    <a href="{{route('admin.projectsPerType', $project->type)}}" class="text-white">
+                                <span class="badge text-bg-info">
+                                    <a href="{{route('admin.projectsPerType', $project->type)}}" class="text-white link-offset-2 link-underline link-underline-opacity-0">
                                         {{ $project->type->name }}
                                     </a>
                                 </span>
