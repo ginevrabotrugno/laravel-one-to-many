@@ -6,7 +6,7 @@
 
         <div class="container-fluid my-5">
             <div class="row">
-                <div class="col-4">
+                <div class="col-6">
                     <form action="{{route('admin.types.store')}}" method="POST">
                         @csrf
                         <div class="input-group mb-3">
@@ -36,6 +36,11 @@
                                                 Elimina
                                             </button>
                                         </form>
+                                    </td>
+                                    <td>
+                                        <a href="{{route('admin.projectsPerType', $type)}}" class="btn btn-success">
+                                            Tutti i Progetti
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
