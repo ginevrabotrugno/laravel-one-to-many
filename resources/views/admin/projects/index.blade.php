@@ -23,6 +23,7 @@
                     <th>Title</th>
                     <th>Start Date</th>
                     <th>Status</th>
+                    <th class="text-center">Category</th>
                     <th class="text-center">Actions</th>
                 </tr>
             </thead>
@@ -33,6 +34,15 @@
                         <td> {{ $project->title }} </td>
                         <td> {{ ($project->start_date)->format('d/m/Y') }} </td>
                         <td> {{ $project->status }} </td>
+                        <td class="text-center">
+                            @if ($project->type)
+                                <span class="badge text-bg-success">
+                                    {{ $project->type->name }}
+                                </span>
+                            @else
+                                ---
+                            @endif
+                        </td>
                         <td class="text-center">
                             <a href="{{route('admin.projects.show', $project)}}" class="btn btn-success">
                                 <i class="fa-solid fa-eye"></i>
