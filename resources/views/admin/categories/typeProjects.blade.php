@@ -5,7 +5,7 @@
         <h1 class="my-5">Elenco Progetti per Tipo</h1>
 
         @foreach ($types as $type)
-            <h3> {{ $type->name }} </h3>
+            <h3> {{ $type->name }} <span class="badge bg-info"> {{ $type->projects->count() }} </span> </h3>
 
             <ul class="list-group m-4">
 
