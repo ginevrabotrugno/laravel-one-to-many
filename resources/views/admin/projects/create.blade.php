@@ -22,6 +22,15 @@
                 @enderror
             </div>
             <div class="mb-3">
+                <label for="type" class="form-label">Tipo</label>
+                <select name="type_id" class="form-select" aria-label="Default select example">
+                    <option value="">Seleziona un tipo</option>
+                        @foreach ($types as $type)
+                            <option value="{{$type->id}}">{{$type->name}}</option>
+                        @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label for="description" class="form-label">Descrizione</label>
                 <textarea name="description" id="description" class="form-control" cols="30" rows="10"> {{ old('description') }} </textarea>
             </div>

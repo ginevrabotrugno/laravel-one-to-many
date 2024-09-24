@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectsRequest;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use App\Functions\Helper;
 use SebastianBergmann\CodeCoverage\Report\Xml\Project as XmlProject;
@@ -26,7 +27,8 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create');
+        $types = Type::all();
+        return view('admin.projects.create', compact('types'));
     }
 
     /**
