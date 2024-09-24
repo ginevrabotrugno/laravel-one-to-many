@@ -78,6 +78,10 @@ class TypeController extends Controller
     public function typeProjects(){
         $types = Type::all();
 
-        return view('admin.categories.typeProjects', compact('types'));
+        return view('admin.types.typeProjects', compact('types'));
+    }
+
+    public function projectsPerType(Type $type){
+        return view('admin.types.projectsPerType', compact('type'));
     }
 }

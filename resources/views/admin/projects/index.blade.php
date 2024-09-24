@@ -37,7 +37,9 @@
                         <td class="text-center">
                             @if ($project->type)
                                 <span class="badge text-bg-success">
-                                    {{ $project->type->name }}
+                                    <a href="{{route('admin.projectsPerType', $project->type)}}" class="text-white">
+                                        {{ $project->type->name }}
+                                    </a>
                                 </span>
                             @else
                                 ---

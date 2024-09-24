@@ -26,6 +26,7 @@ Route::middleware(['auth', 'verified'])
     ->group(function(){
         Route::get('/', [DashboardController::class, 'index'])->name('index');
         Route::get('projs-per-type', [TypeController::class, 'typeProjects'])->name('typeProjects');
+        Route::get('projects-per-type/{type}', [TypeController::class, 'projectsPerType'])->name('projectsPerType');
         Route::resource('projects', ProjectsController::class);
         Route::resource('types', TypeController::class)->except([
             'show', 'edit', 'create'
