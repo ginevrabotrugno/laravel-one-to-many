@@ -32,6 +32,12 @@
         @endif
 
         <ul class="list-group list-group-flush m-3">
+            @if ($project->type)
+                <li class="list-group-item">
+                    <strong>Categoria: </strong>
+                    <span> {{ $project->type->name }} </span>
+                </li>
+            @endif
             <li class="list-group-item">
                 <strong>Data di Inizio: </strong>
                 <span> {{ ($project->start_date)->format('d/m/Y') }} </span>
