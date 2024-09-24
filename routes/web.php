@@ -27,6 +27,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', [DashboardController::class, 'index'])->name('index');
         Route::get('projs-per-type', [TypeController::class, 'typeProjects'])->name('typeProjects');
         Route::resource('projects', ProjectsController::class);
+        Route::resource('types', TypeController::class);
     });
 
 Route::middleware('auth')->group(function () {

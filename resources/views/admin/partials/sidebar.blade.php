@@ -25,7 +25,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('admin.typeProjects') }}" class="nav-link text-white">
+            <a href="{{ route('admin.types.index') }}" class="nav-link text-white">
                 <i class="fa-solid fa-bars-progress"></i>
                 <span>Types</span>
             </a>
