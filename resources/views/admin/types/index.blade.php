@@ -28,7 +28,15 @@
                                     <td>
                                         <button class="btn btn-warning" type="submit" onclick="submitEditTypeForm({{$type->id}})">Salva</button>
                                     </td>
-                                    <td>Elimina</td>
+                                    <td>
+                                        <form action="{{route('admin.types.destroy', $type)}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">
+                                                Elimina
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
