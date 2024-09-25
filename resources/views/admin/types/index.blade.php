@@ -56,7 +56,7 @@
     <script>
         function submitEditTypeForm(id){
             const form = document.getElementById(`form-edit-${id}`);
-            form.sumbit();
+            form.submit();
         }
     </script>
 @endsection
